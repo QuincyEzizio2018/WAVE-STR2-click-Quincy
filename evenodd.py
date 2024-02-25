@@ -12,6 +12,7 @@ else:
     print("invalid input")
 
 n=0
+
 while n <= 100 :
     print(f"Hey {username}, \"{n}\" is an Even or Odd number ?")
     print("A. Even")
@@ -19,7 +20,7 @@ while n <= 100 :
     reply2 = str(input()).lower()
     if n == n/2 :
         if reply2 == "a" or reply2 == "even" or reply2 == "even number"  :
-            print(f"Correct : The answer is {int(n/2)+1}")
+            print(f"Correct : The answer is {int(n/2)}")
         else:
             print(f"Oh!, Sorry {username} Wrong Answer")
     elif n == n/3 :

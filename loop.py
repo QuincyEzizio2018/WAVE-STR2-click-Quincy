@@ -49,3 +49,11 @@ while loop requires a condition to be met
 # while n<=10 :
 #     print(n+1)
 #     n+=2
+
+number = [5, 2, 5, 2, 2]
+print(number)
+for x in number :
+    print(x)
+    print(x * "a")
+    print(x * x)
+
