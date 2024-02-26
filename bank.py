@@ -123,13 +123,24 @@ elif response == 4:
                 print("\nPhone number is more than 11 Digits!")
             else:
                 dataamount = int(input("\nKindly enter data amount >> "))
-                print(f"\nKindly confirm you want to buy N{dataamount} {list[network]} data for {phonenum}")
-                iagree = str(input("Press \"Y\" for Yes to Send or Press \"N\" for No to Cancel >> ")).lower()
-                if iagree == "y" or iagree == "yes":
-                    print(f"\nN{dataamount} {list[network]} network internet has been sent to {phonenum} and N{dataamount} has been deducted from your account balance")
-                elif iagree == "n" or iagree == "no":
-                    print("\nInternet purchase terminated!")
-                else: print("\nInvalid input")
+                if dataamount <= 1200 :
+                    datasize = int(dataamount/2.4)
+                    print(f"\nKindly confirm you want to buy {datasize}mb {list[network]} data for {phonenum} at the price of N{dataamount}")
+                    iagree = str(input("Press \"Y\" for Yes to Send or Press \"N\" for No to Cancel >> ")).lower()
+                    if iagree == "y" or iagree == "yes":
+                        print(f"\nYour {datasize}mb {list[network]} data has been successfully credited to {phonenum} at the price of N{dataamount}, Enjoy")
+                    elif iagree == "n" or iagree == "no":
+                        print("\nInternet purchase terminated!")
+                    else: print("\nInvalid input")
+                elif dataamount >=1300 :
+                    datasize = int(dataamount/867)
+                    print(f"\nKindly confirm you want to buy {datasize}gb {list[network]} data for {phonenum} at the price of N{dataamount}")
+                    iagree = str(input("Press \"Y\" for Yes to Send or Press \"N\" for No to Cancel >> ")).lower()
+                    if iagree == "y" or iagree == "yes":
+                        print(f"\nYour {datasize}gb {list[network]} data has been successfully credited to {phonenum} at the price of N{dataamount}, Enjoy")
+                    elif iagree == "n" or iagree == "no":
+                        print("\nInternet purchase terminated!")
+                    else: print("\nInvalid input")
         break
 elif response == 5:
     print(f"\nyou've selected {response} for Balance Check, Kindly select your Bank")
